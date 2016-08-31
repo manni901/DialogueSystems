@@ -29,8 +29,7 @@ for line in f:
 
 		dialogueTurns[speaker] += 1
 		totalWords[speaker] += len(wordArray)
-		
-		avgWordsPerTurn[speaker] += (len(wordArray) - avgWordsPerTurn[speaker]) / dialogueTurns[speaker]
+		avgWordsPerTurn[speaker] = totalWords[speaker] / dialogueTurns[speaker]
 
 		for word in wordArray:
 
